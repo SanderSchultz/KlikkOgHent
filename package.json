@@ -1,0 +1,53 @@
+{
+  "name": "klikkoghent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "buildwin": "electron-builder --windows"
+  },
+  "build": {
+    "appId": "com.example.klikkoghent",
+    "productName": "klikkoghent",
+    "asarUnpack": [
+      "node_modules/chromedriver/**/*"
+    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility"
+    },
+    "win": {
+      "target": [
+        "portable"
+      ]
+    },
+    "files": [
+      "**/*"
+    ],
+    "extraResources": [
+      "assets/**/*"
+    ]
+  },
+  "keywords": [],
+  "author": {
+    "name": "sandersc"
+  },
+  "homepage": "nothing",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^23.2.1",
+    "electron-builder": "23.6.0",
+    "electron-packager": "^17.1.1"
+  },
+  "dependencies": {
+    "chromedriver": "^111.0.0",
+    "selenium-standalone": "^8.3.0",
+    "selenium-webdriver": "^4.8.2",
+    "webdriver-manager": "^12.1.9"
+  }
+}
